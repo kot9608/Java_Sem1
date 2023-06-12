@@ -19,10 +19,10 @@ public class Sem2 {
 //        StringBuilder builder = new StringBuilder("3+53=56");
 //        System.out.println(builder);
 
-        StringBuilder builder = new StringBuilder("3+53=56");
-        int x = builder.indexOf("=");
-        builder.replace(x,x+1," равно ");
-        System.out.println(builder);
+        StringBuilder builder1 = new StringBuilder("3+53=56");
+        int x = builder1.indexOf("=");
+        builder1.replace(x,x+1," равно ");
+        System.out.println(builder1);
 
 
     }
