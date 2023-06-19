@@ -1,10 +1,10 @@
 import java.lang.reflect.Array;
-        import java.util.ArrayList;
-        import java.util.Arrays;
-        import java.util.Comparator;
-        import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
 
-public class Sem4_HW2 {
+public class Main {
     public static void main(String[] args) {
 
         ArrayList<String> listData_F = new ArrayList<String>();
@@ -49,24 +49,24 @@ public class Sem4_HW2 {
         for (int i = 0; i < listData_V.size()-1 ; i++) {
             int minV = listData_V_tmp.get(i);
             for (int j = i+1; j < listData_V_tmp.size(); j++) {
-                int nextV = listData_V_tmp.get(j);
-                if(nextV < minV) {
-                    int tmp_j =  indexV[j];
-                    indexV[j]=indexV[i];
-                    indexV[i]=tmp_j;
-                    listData_V_tmp.set(i,nextV);
-                    listData_V_tmp.set(j,minV);
-                    minV = nextV;
-                }
+                 int nextV = listData_V_tmp.get(j);
+                 if(nextV < minV) {
+                     int tmp_j =  indexV[j];
+                     indexV[j]=indexV[i];
+                     indexV[i]=tmp_j;
+                     listData_V_tmp.set(i,nextV);
+                     listData_V_tmp.set(j,minV);
+                     minV = nextV;
+                 }
             }
         }
-//        System.out.println(Arrays.toString(indexV));
-//        for (int k = 0; k < indexV.length ;k++){
-//            int s = indexV[k];
-//            String itogStr = listData_F.get(s)+" "+listData_I.get(s).toUpperCase().charAt(0)+"."
-//                    +listData_O.get(s).toUpperCase().charAt(0)+"."+listData_V.get(s)+listData_P.get(s);
-//            System.out.println(itogStr);
-//        }
+        System.out.println(Arrays.toString(indexV));
+        for (int k = 0; k < indexV.length ;k++){
+            int s = indexV[k];
+            String itogStr = listData_F.get(s)+" "+listData_I.get(s).toUpperCase().charAt(0)+"."
+                        +listData_O.get(s).toUpperCase().charAt(0)+"."+listData_V.get(s)+listData_P.get(s);
+            System.out.println(itogStr);
+        }
 
         int[] indexVP = new int[listData_P.size()];
         ArrayList<Integer> indexVP_tmp1 = new ArrayList<Integer>();
@@ -82,20 +82,20 @@ public class Sem4_HW2 {
                 indexVP_tmp2.add(s);
             }
         }
-        int i = 0;
-        for (int j = 0; j < indexVP_tmp1.size(); j++){
-            indexVP[i] = indexVP_tmp1.get(j);
-            i++;
-        }
-        for (int j = 0; j < indexVP_tmp2.size(); j++) {
-            indexVP[i] = indexVP_tmp2.get(j);
-            i++;
-        }
-//        System.out.println(Arrays.toString(indexVP));
+            int i = 0;
+            for (int j = 0; j < indexVP_tmp1.size(); j++){
+                indexVP[i] = indexVP_tmp1.get(j);
+                i++;
+            }
+            for (int j = 0; j < indexVP_tmp2.size(); j++) {
+                indexVP[i] = indexVP_tmp2.get(j);
+                i++;
+            }
+        System.out.println(Arrays.toString(indexVP));
         for (int k = 0; k < indexVP.length ;k++){
             int s = indexVP[k];
-            String itogStr = listData_F.get(s)+" "+listData_I.get(s).toUpperCase().charAt(0)+ ". "
-                    +listData_O.get(s).toUpperCase().charAt(0)+". "+listData_V.get(s)+listData_P.get(s);
+            String itogStr = listData_F.get(s)+" "+listData_I.get(s).toUpperCase().charAt(0)+"."
+                    +listData_O.get(s).toUpperCase().charAt(0)+"."+listData_V.get(s)+listData_P.get(s);
             System.out.println(itogStr);
         }
     }
